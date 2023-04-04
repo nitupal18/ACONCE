@@ -1,0 +1,54 @@
+$spacer:1000;
+$myWidth: 580px;
+
+body{
+    background-color: aliceblue;
+}
+
+.justify-content-evenly{
+    width: $myWidth;
+    margin-left: 220px;
+    align-items: center;
+}
+.form-outline{
+    margin-right: 10px;
+}
+.btn{
+    margin-left: 450px;
+}
+.border{
+    padding: 20px;
+}
+#content_output{
+    margin-top: 20px;
+}
+
+.table{
+    width: auto !important;
+    margin-left: 40px;
+}
+#total_cost{
+    text-align: center;
+}
+#cash_flow_heading{
+    text-align: center;
+}
+#introduction{
+    text-align: center;
+    text-decoration:double ;
+}
+#to_emphasize_total_amount{
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(235, 128, 6);
+}
+#o_emphasize_total_interest{
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(185, 235, 6);
+}
+
+
+
