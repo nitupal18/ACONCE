@@ -176,11 +176,14 @@ function App() {
     let changedPiechartdata = [total_gst.toFixed(2), principle_sum.toFixed(2), interest_sum.toFixed(2), (processing_fees * 1.18).toFixed(2)];
     setPiedata(changedPiechartdata);
     var irr = calculateIRR(CF, 0.1) * 12;
+    if(irr=="-Infinity"){
+      irr=0;
+    }
     var total_interest_at_the_end = total_amount_to_paid_at_the_end - initial_loan_amount;
-    document.getElementById("total_cost").innerHTML = "Total amount to be paid by you during the tenure is " + total_amount_to_paid_at_the_end.toFixed(2) +", the total interest paid druing the tenure is "+total_interest_at_the_end.toFixed(2) +"<br>"+" with rate of return received by the bank is "+(irr * 100).toFixed(2)+"%.";
+    document.getElementById("total_cost").innerHTML = ("Total amount to be paid by you during the tenure is " + "<span id='to_emphasize_total_amount' class='fs-2 font-monospace'>"+total_amount_to_paid_at_the_end.toFixed(2)+"</span>" +", the total interest paid druing the tenure is "
+    +"<span id='to_emphasize_total_interest' class='fs-2 font-monospace'>"+total_interest_at_the_end.toFixed(2)+"</span>" +"<br>"+" with rate of return received by the bank is "+"<span id='irr_emphasize' class='fs-2 font-monospace'>"+(irr * 100).toFixed(2)+"%"+"</span>");
     console.log(piechart_data);
   }
-
 
   const calculate = () => {
     //inputs
@@ -188,8 +191,7 @@ function App() {
     const no_cost_emi_discount = document.getElementById("validationCustom03").value;
     const tenure = document.getElementById("validationCustom02").value;
     const processing_fees = document.getElementById("validationCustom04").value;
-    console.log(price_of_the_item);
-
+    
     // Processing
 
     var emi = price_of_the_item / tenure;
@@ -232,7 +234,7 @@ function App() {
         </div>
         <br></br>
         <p id="introduction">
-          Now you can easily calculate the actual amount you will paying when you opt for a NO COST EMI scheme.
+          Now you can easily calculate the actual amount you will paying when you opt for a  <span class="fw-light">NO COST EMI </span>scheme.
         </p>
         <div id="content_input" class="border border-primary rounded">
           <div id="input_field">
@@ -289,8 +291,8 @@ function App() {
           <button class="btn btn-secondary" onClick={calculate}>Calculate</button><br></br>
         </div>
         <div id="content_output">
-          <p id="total_cost">Total amount to be paid by you during the tenure is <span id="to_emphasize_total_amount">10324.82</span>, 
-          the total interest paid druing the tenure is <span id="to_emphasize_total_interest">824.2</span> <br></br>with rate of return received by the bank is 13.13%.
+          <p id="total_cost" class="fw-light">Total amount to be paid by you during the tenure is <span id="to_emphasize_total_amount" class="fs-2 font-monospace">10324.82</span>, 
+          the total interest paid druing the tenure is <span id="to_emphasize_total_interest" class="fs-2 font-monospace">824.2</span> <br></br>with rate of return received by the bank is <span id="irr_emphasize" class="fs-2 font-monospace">13.13%</span>.
           </p>
           <p id="cash_flow_heading">
             Below you can see the cash flow and its detials.
@@ -305,7 +307,7 @@ function App() {
                 <th scope="col">Principle Repaid</th>
                 <th scope="col">Interest Paid</th>
                 <th scope="col">GST on Interest</th>
-                <th scope="col">Processing_fees</th>
+                <th scope="col">Processing Fees</th>
                 <th scope="col">Total EMI</th>
               </tr>
             </thead>
