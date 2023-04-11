@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Actual-Cost-of-No-Cost-EMI/static/css/main.cb811857.css",
+    "main.js": "/Actual-Cost-of-No-Cost-EMI/static/js/main.2f3634ca.js",
+    "static/js/787.08fa795f.chunk.js": "/Actual-Cost-of-No-Cost-EMI/static/js/787.08fa795f.chunk.js",
+    "index.html": "/Actual-Cost-of-No-Cost-EMI/index.html",
+    "main.cb811857.css.map": "/Actual-Cost-of-No-Cost-EMI/static/css/main.cb811857.css.map",
+    "main.2f3634ca.js.map": "/Actual-Cost-of-No-Cost-EMI/static/js/main.2f3634ca.js.map",
+    "787.08fa795f.chunk.js.map": "/Actual-Cost-of-No-Cost-EMI/static/js/787.08fa795f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb811857.css",
+    "static/js/main.2f3634ca.js"
+  ]
+}
