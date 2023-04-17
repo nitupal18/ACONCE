@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Actual-Cost-of-No-Cost-EMI/static/css/main.ca9c8f6b.css",
-    "main.js": "/Actual-Cost-of-No-Cost-EMI/static/js/main.8671621c.js",
-    "static/js/787.08fa795f.chunk.js": "/Actual-Cost-of-No-Cost-EMI/static/js/787.08fa795f.chunk.js",
-    "index.html": "/Actual-Cost-of-No-Cost-EMI/index.html",
-    "main.ca9c8f6b.css.map": "/Actual-Cost-of-No-Cost-EMI/static/css/main.ca9c8f6b.css.map",
-    "main.8671621c.js.map": "/Actual-Cost-of-No-Cost-EMI/static/js/main.8671621c.js.map",
-    "787.08fa795f.chunk.js.map": "/Actual-Cost-of-No-Cost-EMI/static/js/787.08fa795f.chunk.js.map"
+    "main.css": "/ACONCE-calculator/static/css/main.ca9c8f6b.css",
+    "main.js": "/ACONCE-calculator/static/js/main.18bd2b0c.js",
+    "static/js/787.08fa795f.chunk.js": "/ACONCE-calculator/static/js/787.08fa795f.chunk.js",
+    "index.html": "/ACONCE-calculator/index.html",
+    "main.ca9c8f6b.css.map": "/ACONCE-calculator/static/css/main.ca9c8f6b.css.map",
+    "main.18bd2b0c.js.map": "/ACONCE-calculator/static/js/main.18bd2b0c.js.map",
+    "787.08fa795f.chunk.js.map": "/ACONCE-calculator/static/js/787.08fa795f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca9c8f6b.css",
-    "static/js/main.8671621c.js"
+    "static/js/main.18bd2b0c.js"
   ]
 }
