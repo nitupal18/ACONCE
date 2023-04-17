@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import "./App.scss";
+import Table from 'react-bootstrap/Table';
+
 import {
   MDBContainer,
   MDBNavbar,
@@ -10,12 +12,10 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBBtn,
   MDBCollapse,
   MDBValidation,
   MDBValidationItem,
   MDBInput,
-  MDBInputGroup
 } from 'mdb-react-ui-kit';
 
 function App() {
@@ -176,12 +176,12 @@ function App() {
     let changedPiechartdata = [total_gst.toFixed(2), principle_sum.toFixed(2), interest_sum.toFixed(2), (processing_fees * 1.18).toFixed(2)];
     setPiedata(changedPiechartdata);
     var irr = calculateIRR(CF, 0.1) * 12;
-    if(irr=="-Infinity"){
-      irr=0;
+    if (irr == "-Infinity") {
+      irr = 0;
     }
     var total_interest_at_the_end = total_amount_to_paid_at_the_end - initial_loan_amount;
-    document.getElementById("total_cost").innerHTML = ("Total amount to be paid by you during the tenure is " + "<span id='to_emphasize_total_amount' class='fs-2 font-monospace'>"+total_amount_to_paid_at_the_end.toFixed(2)+"</span>" +", the total interest paid druing the tenure is "
-    +"<span id='to_emphasize_total_interest' class='fs-2 font-monospace'>"+total_interest_at_the_end.toFixed(2)+"</span>" +"<br>"+" with rate of return received by the bank is "+"<span id='irr_emphasize' class='fs-2 font-monospace'>"+(irr * 100).toFixed(2)+"%"+"</span>");
+    document.getElementById("total_cost").innerHTML = ("Total amount to be paid by you during the tenure is " + "<span id='to_emphasize_total_amount' class='fs-2 font-monospace'>" + total_amount_to_paid_at_the_end.toFixed(2) + "</span>" + ", the total interest paid druing the tenure is "
+      + "<span id='to_emphasize_total_interest' class='fs-2 font-monospace'>" + total_interest_at_the_end.toFixed(2) + "</span>" + "<br>" + " with rate of return received by the bank is " + "<span id='irr_emphasize' class='fs-2 font-monospace'>" + (irr * 100).toFixed(2) + "%" + "</span>");
     console.log(piechart_data);
   }
 
@@ -191,7 +191,7 @@ function App() {
     const no_cost_emi_discount = document.getElementById("validationCustom03").value;
     const tenure = document.getElementById("validationCustom02").value;
     const processing_fees = document.getElementById("validationCustom04").value;
-    
+
     // Processing
 
     var emi = price_of_the_item / tenure;
@@ -236,70 +236,80 @@ function App() {
         <p id="introduction">
           Now you can easily calculate the actual amount you will paying when you opt for a  <span class="fw-light">NO COST EMI </span>scheme.
         </p>
-        <div id="content_input" class="border border-primary rounded">
-          <div id="input_field">
-            <MDBValidation className='row g-3'>
-              <div class="d-flex justify-content-evenly align-items-center">
-                <MDBValidationItem className='col-md-4' class="form-outline w-25">
-                  <MDBInput
-                    value={formValue.price}
-                    name='price'
-                    onChange={onChange}
-                    id='validationCustom01'
-                    required
-                    label='Price of the item'
-                    size='sm'
-                  />
+        <div id="content_input" class="pb-4">
+          <div id="input_field" class="bg-white border rounded-5">
+            <MDBValidation className='row g-3' class="w-100 p-4 pb-4">
+              {/* to make content stay  inline class="d-flex justify-content-evenly align-items-center" */}
+              <div class="row g-3 needs validation" novalidate>
+                <MDBValidationItem class="col-md-4">
+                  <div class="form-outline">
+                    <MDBInput
+                      value={formValue.price}
+                      name='price'
+                      onChange={onChange}
+                      id='validationCustom01'
+                      required
+                      label='Price of the item'
+                      size='sm'
+                      class="form-control active"
+                    />
+                  </div>
                 </MDBValidationItem><br></br>
-                <MDBValidationItem className='col-md-4' class="form-outline w-25">
-                  <MDBInput
-                    value={formValue.tenure}
-                    name='tenure'
-                    onChange={onChange}
-                    id='validationCustom02'
-                    required
-                    label='Tenure of EMI'
-                    size='sm'
-                  />
+                <MDBValidationItem className='col-md-4'>
+                  <div class="form-outline">
+                    <MDBInput
+                      value={formValue.tenure}
+                      name='tenure'
+                      onChange={onChange}
+                      id='validationCustom02'
+                      required
+                      label='Tenure of EMI'
+                      size='sm'
+                    />
+                  </div>
                 </MDBValidationItem><br></br>
-                <MDBValidationItem className='col-md-4' class="form-outline w-25">
-                  <MDBInput
-                    value={formValue.discount}
-                    name='discount'
-                    onChange={onChange}
-                    id='validationCustom03'
-                    required
-                    label='Discount Offered'
-                    size='sm'
-                  />
+                <MDBValidationItem className='col-md-4'>
+                  <div class="form-outline">
+                    <MDBInput
+                      value={formValue.discount}
+                      name='discount'
+                      onChange={onChange}
+                      id='validationCustom03'
+                      required
+                      label='Discount Offered'
+                      size='sm'
+                    />
+                  </div>
                 </MDBValidationItem><br></br>
-                <MDBValidationItem className='col-md-4' class="form-outline w-25">
-                  <MDBInput
-                    value={formValue.processing_fees}
-                    name='processing_fees'
-                    onChange={onChange}
-                    id='validationCustom04'
-                    required
-                    label='Processing Fees'
-                    size='sm'
-                  />
+                <MDBValidationItem className='col-md-4'>
+                  <div class="form-outline">
+                    <MDBInput
+                      value={formValue.processing_fees}
+                      name='processing_fees'
+                      onChange={onChange}
+                      id='validationCustom04'
+                      required
+                      label='Processing Fees'
+                      size='sm'
+                    />
+                  </div>
                 </MDBValidationItem>
               </div>
             </MDBValidation>
           </div>
-          <br></br>
           <button class="btn btn-secondary" onClick={calculate}>Calculate</button><br></br>
         </div>
         <div id="content_output">
-          <p id="total_cost" class="fw-light">Total amount to be paid by you during the tenure is <span id="to_emphasize_total_amount" class="fs-2 font-monospace">10324.82</span>, 
-          the total interest paid druing the tenure is <span id="to_emphasize_total_interest" class="fs-2 font-monospace">824.2</span> <br></br>with rate of return received by the bank is <span id="irr_emphasize" class="fs-2 font-monospace">13.13%</span>.
+          <p id="total_cost" class="fw-light">Total amount to be paid by you during the tenure is <span id="to_emphasize_total_amount" class="fs-2 font-monospace">10324.82</span>,
+            the total interest paid druing the tenure is <span id="to_emphasize_total_interest" class="fs-2 font-monospace">824.2</span> <br></br>with rate of return received by the bank is <span id="irr_emphasize" class="fs-2 font-monospace">13.13%</span>.
           </p>
           <p id="cash_flow_heading">
             Below you can see the cash flow and its detials.
           </p>
         </div>
         <div id="amortization_table">
-          <table id="amortization_tbody" class="table table-sm">
+          {/* <table responsive id="amortization_tbody" class="table-responsive table table-sm table-bordered table-hover "> */}
+          <Table responsive size="sm" class="table table-bordered" id="amortization_tbody">
             <thead>
               <tr>
                 <th scope="col">Month</th>
@@ -358,7 +368,7 @@ function App() {
                 <td>2006.14</td>
               </tr>
             </tbody>
-          </table>
+          </Table>
         </div>
       </body >
     </html >
