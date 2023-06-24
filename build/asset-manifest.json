@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ACONCE-Calc/static/css/main.ca9c8f6b.css",
-    "main.js": "/ACONCE-Calc/static/js/main.ad6c3f6a.js",
-    "static/js/787.08fa795f.chunk.js": "/ACONCE-Calc/static/js/787.08fa795f.chunk.js",
-    "index.html": "/ACONCE-Calc/index.html",
-    "main.ca9c8f6b.css.map": "/ACONCE-Calc/static/css/main.ca9c8f6b.css.map",
-    "main.ad6c3f6a.js.map": "/ACONCE-Calc/static/js/main.ad6c3f6a.js.map",
-    "787.08fa795f.chunk.js.map": "/ACONCE-Calc/static/js/787.08fa795f.chunk.js.map"
+    "main.css": "/ACONCE/static/css/main.ca9c8f6b.css",
+    "main.js": "/ACONCE/static/js/main.b2ff67ac.js",
+    "static/js/787.08fa795f.chunk.js": "/ACONCE/static/js/787.08fa795f.chunk.js",
+    "index.html": "/ACONCE/index.html",
+    "main.ca9c8f6b.css.map": "/ACONCE/static/css/main.ca9c8f6b.css.map",
+    "main.b2ff67ac.js.map": "/ACONCE/static/js/main.b2ff67ac.js.map",
+    "787.08fa795f.chunk.js.map": "/ACONCE/static/js/787.08fa795f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca9c8f6b.css",
-    "static/js/main.ad6c3f6a.js"
+    "static/js/main.b2ff67ac.js"
   ]
 }
