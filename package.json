@@ -1,7 +1,6 @@
 {
   "name": "mdb-react-template",
   "version": "6.0.0",
-  "homepage": "https://nitupal18.github.io/ACONCE",
   "description": "template for mdb-react-ui-kit",
   "private": true,
   "dependencies": {
