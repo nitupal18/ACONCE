@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import "./App.scss";
-import Table from 'react-bootstrap/Table';
 
 import {
   MDBContainer,
@@ -309,7 +308,7 @@ function App() {
         </div>
         <div id="amortization_table">
           {/* <table responsive id="amortization_tbody" class="table-responsive table table-sm table-bordered table-hover "> */}
-          <Table responsive size="sm" class="table table-bordered" id="amortization_tbody">
+          <table responsive size="sm" class="table table-bordered" id="amortization_tbody">
             <thead>
               <tr>
                 <th scope="col">Month</th>
@@ -368,7 +367,7 @@ function App() {
                 <td>2006.14</td>
               </tr>
             </tbody>
-          </Table>
+          </table>
         </div>
       </body >
     </html >
